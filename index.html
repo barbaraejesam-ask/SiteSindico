@@ -1,55 +1,3 @@
-=== README.md ===
-
-Projeto: site-sindico-profissional
-Arquivos incluídos:
-- index.html  (site completo — HTML + CSS + JS inline)
-
-O que você precisa fazer (resumo rápido):
-1) Abra este documento e copie o conteúdo do `index.html` para um arquivo chamado `index.html`.
-2) Coloque este arquivo dentro de uma pasta (ex.: `site-sindico`).
-3) Teste localmente abrindo o `index.html` no navegador (duplo clique).
-4) Para publicar no Netlify: use o método "Drag & Drop" (arrastar a pasta) ou conecte um repositório do GitHub. Instruções detalhadas abaixo.
-
-INSTRUÇÕES DETALHADAS (passo a passo completo)
-
-A) Salvar o arquivo no computador (passo-a-passo fácil)
-1. Abra este documento e localize a seção `=== index.html ===`.
-2. Selecione TODO o texto dessa seção (Ctrl+A / Cmd+A no bloco) e copie (Ctrl+C / Cmd+C).
-3. Abra um editor de texto simples (Bloco de Notas no Windows, TextEdit no macOS em modo texto, ou VS Code se preferir).
-4. Cole o conteúdo e salve como `index.html` (certifique-se de escolher UTF-8 se o editor pedir).
-5. Crie uma pasta chamada `site-sindico` e mova `index.html` para essa pasta.
-
-B) Testar localmente
-- No Windows ou macOS: dê um duplo clique em `index.html` — o site abrirá no navegador.
-
-C) Publicar no Netlify — Método 1: Deploy manual (arrastar a pasta) — mais simples
-1. Abra o navegador e vá até: https://app.netlify.com/drop  (ou abra netlify.com e procure por "Deploy -> Drag & drop site folder").
-2. Arraste a pasta `site-sindico` (ou um arquivo zip contendo a pasta) para a área indicada.
-3. O Netlify fará o upload e criará um site com um endereço do tipo `random-name.netlify.app`.
-4. Pronto — compartilhe o link!
-
-D) Publicar no Netlify — Método 2: Deploy via GitHub (para atualizações contínuas)
-1. Crie uma conta no GitHub (github.com) se ainda não tiver.
-2. Crie um repositório novo (por ex.: `site-sindico`).
-3. Faça upload do `index.html` pelo site do GitHub (botão "Upload files") e finalize commit.
-4. Crie uma conta no Netlify (ou faça login) e clique em "Sites" → "New site" → "Import from Git" → escolha GitHub → selecione o repositório `site-sindico` → Deploy.
-
-Se preferir fazer via terminal (avançado):
-- git init
-- git add index.html
-- git commit -m "Primeiro deploy do site"
-- git branch -M main
-- git remote add origin https://github.com/SEU_USUARIO/site-sindico.git
-- git push -u origin main
-
-E) Como editar o site (trocar nome, e-mail, telefone)
-- Abra `index.html` no editor de texto e troque as marcas: `[SEU NOME]`, `contato@seuemail.com`, `+55 (00) 00000-0000` pelos seus dados.
-- Salve e reenvie para o Netlify (se usar GitHub, apenas commit e push; se usou Drag&Drop, reenvie a pasta atualizada).
-
-F) Dicas e resolução de problemas
-- Se o Netlify não mostrar seu site, verifique se o arquivo principal chama-se `index.html` e está no diretório raiz da pasta que você arrastou.
-- Se o e-mail não copiar no botão, copie manualmente do link `mailto:`.
-
 === index.html ===
 <!--
   Arquivo: index.html
@@ -62,7 +10,8 @@ F) Dicas e resolução de problemas
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Síndico Profissional — [SEU NOME]</title>
+  <title> Base Condominial
+    Síndico Profissional — Luciano Folador</title>
   <meta name="description" content="Serviços de gestão de condomínios: administração, manutenção, assessoria." />
   <style>
     :root{--bg:#f6f8fa;--card:#ffffff;--accent:#0077b6;--text:#0b2a3a;--muted:#51606a}
@@ -144,7 +93,7 @@ F) Dicas e resolução de problemas
     // Script mínimo: atualiza ano e copia e-mail
     document.getElementById('year').textContent = new Date().getFullYear();
     function copyEmail(){
-      const email = 'contato@seuemail.com';
+      const email = 'sindicos.folador@gmail.com';
       if(navigator.clipboard){
         navigator.clipboard.writeText(email).then(()=>{alert('E-mail copiado: '+email) }, ()=>{ prompt('Copie o e-mail abaixo:', email) });
       } else { prompt('Copie o e-mail abaixo:', email); }
@@ -152,5 +101,6 @@ F) Dicas e resolução de problemas
   </script>
 </body>
 </html>
+
 
 
