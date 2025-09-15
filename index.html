@@ -1,97 +1,187 @@
-=== index.html ===
-<!--
-  Arquivo: index.html
-  Como usar: salve este conteúdo exatamente como "index.html" dentro de uma pasta (ex.: site-sindico) e faça o deploy.
-  Substitua os placeholders: [SEU NOME], contato@seuemail.com, +55 (00) 00000-0000
--->
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
+  <!-- Define o tipo de caracteres usados na página (acentos, símbolos etc.) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Base Condominial
-    Síndico Profissional — Luciano Folador</title>
+  <!-- Faz o site funcionar bem em celular, tablet e computador -->
+
+  <title>Síndico Profissional — [SEU NOME]</title>
+  <!-- Título que aparece na aba do navegador -->
+
   <meta name="description" content="Serviços de gestão de condomínios: administração, manutenção, assessoria." />
+  <!-- Descrição do site para mecanismos de busca (Google, etc.) -->
+
   <style>
-    :root{--bg:#f6f8fa;--card:#ffffff;--accent:#0077b6;--text:#0b2a3a;--muted:#51606a}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-    .container{max-width:920px;margin:0 auto;padding:20px}
-    .header{display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo svg{width:48px;height:48px}
-    nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
-    .hero{background:linear-gradient(90deg, rgba(0,119,182,0.06), rgba(0,119,182,0.02));padding:22px;border-radius:12px;margin-top:18px}
-    h1{margin:0;font-size:1.5rem}
-    p.lead{margin:8px 0 0;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
-    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 2px 6px rgba(10,20,30,.06)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none}
-    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
-    @media(max-width:700px){nav{display:none}}
+  /* ======= CORES PERSONALIZADAS ======= */
+  :root {
+    --bg: #f5f7f9;         /* Fundo da página */
+    --card: #ffffff;       /* Fundo dos cartões */
+    --accent: #00bbb4;     /* Cor principal (botões, destaques) */
+    --text: #01295c;       /* Cor principal do texto */
+    --muted: #5e6e7f;      /* Texto secundário, mais suave */
+  }
+
+  /* ======= CONFIGURAÇÕES GERAIS ======= */
+  * {
+    box-sizing: border-box;
+    /* Ajuda a calcular tamanho de elementos corretamente */
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background: var(--bg);   /* Cor de fundo da página */
+    color: var(--text);      /* Cor do texto principal */
+    -webkit-font-smoothing: antialiased;
+    /* Deixa o texto mais bonito em telas */
+  }
+
+  .container {
+    max-width: 920px;        /* Largura máxima do conteúdo */
+    margin: 0 auto;          /* Centraliza a página */
+    padding: 20px;           /* Espaço interno nas bordas */
+  }
+
+  /* ======= CABEÇALHO ======= */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Alinha logo à esquerda e links à direita */
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Espaço entre a imagem da logo e o texto (se quiser adicionar) */
+  }
+
+  .logo img {
+    height: 48px;
+    /* Tamanho da imagem da logo */
+  }
+
+  nav a {
+    margin-left: 12px;
+    text-decoration: none;
+    color: var(--muted);
+    /* Links do menu ficam com cor mais suave */
+  }
+
+  /* ======= BLOCO DE DESTAQUE (HERO) ======= */
+  .hero {
+    background: linear-gradient(90deg, rgba(0,187,180,0.08), rgba(1,41,92,0.02));
+    padding: 22px;
+    border-radius: 12px;
+    margin-top: 18px;
+    /* Área com fundo levemente colorido para destacar o título e frase principal */
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    /* Título grande */
+  }
+
+  p.lead {
+    margin: 8px 0 0;
+    color: var(--muted);
+    /* Texto secundário abaixo do título */
+  }
+
+  /* ======= GRADE DE CARTÕES ======= */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+    /* Área com cartões de serviços */
+  }
+
+  .card {
+    background: var(--card);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(10,20,30,0.06);
+    /* Cartões com sombra leve e bordas arredondadas */
+  }
+
+  /* ======= BOTÃO PADRÃO ======= */
+  .btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    /* Botão com fundo colorido e texto branco */
+  }
+
+  /* ======= RODAPÉ ======= */
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    /* Texto pequeno e centralizado no fim da página */
+  }
+
+  /* ======= RESPONSIVO: OCULTAR MENU EM CELULARES ======= */
+  @media(max-width: 700px) {
+    nav {
+      display: none;
+    }
+    /* Esconde o menu de navegação em telas pequenas */
+  }
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- CABEÇALHO COM LOGO E MENU -->
     <header class="header">
       <div class="logo">
-         <img src="logo.png" alt="Logo" style="height:48px;">
+        <img src="logo.png" alt="Logo [SEU NOME]">
+        <!-- A logo da sua empresa. O arquivo deve estar na mesma pasta que este HTML -->
       </div>
-          <strong>Síndico Pro</strong>
-          <div style="font-size:0.9rem;color:var(--muted)">Gestão de condomínios</div>
-        </div>
-      </div>
-      <nav aria-label="menu">
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
       </nav>
     </header>
 
-    <section class="hero" role="region" aria-labelledby="hero-title">
-      <h1 id="hero-title">Olá! Eu sou <span id="owner-name">[SEU NOME]</span>, síndico profissional.</h1>
-      <p class="lead">Ofereço administração, fiscalização, manutenção e assessoria para condomínios pequenos e médios. Transparência e organização.</p>
-      <p style="margin-top:12px"><a class="btn" href="#contato">Fale comigo</a></p>
-    </section>
+    <!-- BLOCO DE DESTAQUE (CHAMADA PRINCIPAL) -->
+    <div class="hero">
+      <h1>Síndico Profissional — [SEU NOME]</h1>
+      <p class="lead">Gestão de condomínios com transparência, eficiência e compromisso.</p>
+    </div>
 
-    <section id="servicos" class="grid" aria-labelledby="servicos-title">
-      <h2 id="servicos-title" style="grid-column:1/-1;margin:0">Serviços</h2>
-      <div class="card"><h3>Gestão administrativa</h3><p>Controle financeiro, emissão de boletos, prestação de contas e organização de documentos.</p></div>
-      <div class="card"><h3>Manutenção</h3><p>Coordenação de manutenção preventiva e corretiva, contratação de prestadores e supervisão de obras leves.</p></div>
-      <div class="card"><h3>Assessoria</h3><p>Orientação sobre normas, regulamentos e atendimento a assembleias.</p></div>
-    </section>
+    <!-- SERVIÇOS EM CARTÕES -->
+    <div class="grid">
+      <div class="card">
+        <h2>Administração</h2>
+        <p>Gestão completa de documentos, contratos, assembleias e finanças.</p>
+      </div>
+      <div class="card">
+        <h2>Manutenção</h2>
+        <p>Coordenação de serviços e cronogramas preventivos e corretivos.</p>
+      </div>
+      <div class="card">
+        <h2>Assessoria</h2>
+        <p>Apoio jurídico e técnico para decisões estratégicas do condomínio.</p>
+      </div>
+    </div>
 
-    <section id="sobre" class="card" style="margin-top:18px">
-      <h2>Sobre</h2>
-      <p>Profissional com experiência em administração condominial. Trabalho com foco em redução de custos, organização e comunicação clara com os condôminos.</p>
-    </section>
-
-    <section id="contato" class="card" style="margin-top:18px">
-      <h2>Contato</h2>
-      <p>Email: <a id="email-link" href="mailto:contato@seuemail.com">contato@seuemail.com</a><br>Tel: <a href="tel:+550000000000">+55 (00) 00000-0000</a></p>
-      <p><button onclick="copyEmail()" class="btn">Copiar e‑mail</button></p>
-      <p style="font-size:0.9rem;color:var(--muted)">Dica: substitua os textos entre colchetes pelo seu nome e contatos no arquivo.</p>
-    </section>
-
+    <!-- RODAPÉ COM CONTATO -->
     <footer>
-      © <span id="year"></span> Síndico Profissional — feito com ♥
+      © [SEU NOME] — contato@seuemail.com — +55 (00) 00000-0000
     </footer>
-  </div>
 
-  <script>
-    // Script mínimo: atualiza ano e copia e-mail
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function copyEmail(){
-      const email = 'sindicos.folador@gmail.com';
-      if(navigator.clipboard){
-        navigator.clipboard.writeText(email).then(()=>{alert('E-mail copiado: '+email) }, ()=>{ prompt('Copie o e-mail abaixo:', email) });
-      } else { prompt('Copie o e-mail abaixo:', email); }
-    }
-  </script>
+  </div>
 </body>
 </html>
-
-
-
-
