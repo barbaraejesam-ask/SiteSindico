@@ -30,16 +30,16 @@ Convidamos você a acompanhar nossa jornada e descobrir como podemos contribuir 
   --muted: #cccccc;      /* texto suave */
 }
     body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
+  content: ""; /* Necessário para o pseudo-elemento funcionar */
+  position: fixed; /*Fixa a imagem no fundo, sem rolar junto*/
+  top: 0; /*Ocupa toda a tela*/
+  left: 0; 
   width: 100%;
   height: 100%;
-  background: url('fundo_transparente.png') no-repeat center center / cover;
+  background: url('fundo_transparente.png') no-repeat center center / cover; /*Define a imagem de fundo*/
   opacity: 0.3; /* 30% de transparência */
-  z-index: -1;
-  pointer-events: none;
+  z-index: -1; /*Fica atrás de todo o conteúdo*/
+  pointer-events: none; /*Evita que a imagem atrapalhe cliques ou rolagem*/
 }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
@@ -62,7 +62,7 @@ Convidamos você a acompanhar nossa jornada e descobrir como podemos contribuir 
   <div class="container">
     <header class="header">
       <div class="logo">
-         <img src="logo.png" alt="Logo" style="height:50px;">
+         <img src="logo_transparente.png" alt="Logo" style="height:150px;">
       </div>
           <strong>Síndico Pro</strong>
           <div style="font-size:0.9rem;color:var(--muted)">Gestão de condomínios</div>
@@ -121,6 +121,7 @@ Convidamos você a acompanhar nossa jornada e descobrir como podemos contribuir 
   </script>
 </body>
 </html>
+
 
 
 
