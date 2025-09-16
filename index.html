@@ -56,6 +56,29 @@ Convidamos você a acompanhar nossa jornada e descobrir como podemos contribuir 
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none}
     footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
     @media(max-width:700px){nav{display:none}}
+
+    .hero-layout {   /*Adicionei para colocar a foto e configurar*/
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 20px;
+              flex-wrap: wrap;
+            }
+            .hero-texto {
+              flex: 1 1 60%;
+            }
+            .hero-foto {
+              flex: 1 1 30%;
+              text-align: right;
+            }
+            .foto-sindico {
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 4px solid #0077b6; /* azul médio */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
   </style>
 </head>
 <body>
@@ -127,6 +150,7 @@ Convidamos você a acompanhar nossa jornada e descobrir como podemos contribuir 
   </script>
 </body>
 </html>
+
 
 
 
